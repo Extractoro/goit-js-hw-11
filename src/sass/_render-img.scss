@@ -1,32 +1,62 @@
-    .img_wrapper {
-        width: 100%;
-        height: 300px;
-    }
-    
-    .stretch img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-    
-    .gallery {
-        padding: 0px 30px;
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: calc(-1 * #{$card-set-gap});
-        margin-bottom: calc(-1 * #{$card-set-gap});
+.img_wrapper {
+    width: 100%;
+    height: 300px;
+}
+
+.stretch img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery {
+    padding: 0px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: calc(-1 * #{$card-set-gap});
+    margin-bottom: calc(-1 * #{$card-set-gap});
+    &__item {
         margin-right: $card-set-gap;
         margin-bottom: $card-set-gap;
-        @media screen and (min-width: $tablet) {}
-        @media screen and (min-width: $desktop) {}
-    }
-    
-    photo-card {
-        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-        border-radius: 16px 16px 16px 16px;
-        hoto-card:hover,
-        photo-card:focus {
-            box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+        @media screen and (min-width: $tablet) {
+            flex-basis: calc(100% / 2 - #{$card-set-gap});
+        }
+        @media screen and (min-width: $desktop) {
+            flex-basis: calc(100% / 4 - #{$card-set-gap});
         }
     }
+}
+
+.photo-card {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 16px 16px 16px 16px;
+}
+
+.photo-card:hover,
+.photo-card:focus {
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper-img {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px 0;
+    border-radius: 0 0 16px 16px;
+    &__p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+}
+
+.btnn {
+    display: block;
+    background-color: rgba(99, 51, 232, 0.521);
+    margin: 25px auto;
+    padding: 10px 15px;
+    color: azure;
+}

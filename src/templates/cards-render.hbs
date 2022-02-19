@@ -1,0 +1,37 @@
+{{#each this}}
+    {{#each hits}}
+
+        <div class="gallery__item">
+            <a href="{{largeImageURL}}" class="rounded">
+                <div class="photo-card">
+                    <div class='img_wrapper stretch'>
+                        <img class='rounded img-thumbnail shadow'
+                            src={{webformatURL}}
+                            alt={{tags}}
+                            loading='lazy'/>
+                    </div>
+
+                    <div class="wrapper-img">
+                        <p class="wrapper-img__p">
+                            <b>Likes</b>
+                            {{likes}}
+                        </p>
+                        <p class="wrapper-img__p">
+                            <b>Views</b>
+                            {{views}}
+                        </p>
+                        <p class="wrapper-img__p">
+                            <b>Comments</b>
+                            {{comments}}
+                        </p>
+                        <p class="wrapper-img__p">
+                            <b>Downloads</b>
+                            {{downloads}}
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    {{/each}}
+{{/each}}
